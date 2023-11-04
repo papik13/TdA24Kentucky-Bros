@@ -24,7 +24,8 @@
     padding: 5px;
 }
 .menu-logo {
-    
+    flex: 2;
+    padding: 5px;
 }
 .menu-item a {
     text-decoration: none;
