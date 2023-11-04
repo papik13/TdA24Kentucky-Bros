@@ -3,7 +3,7 @@
         <img src="" alt="" class="menu-logo">
         <h2 class="menu-item"><a href="">DOMŮ</a></h2>
         <h2 class="menu-item"><a href="">O NÁS</a></h2>
-        <h2 class="menu-item"><a href="">KONTAKTQ</a></h2>
+        <h2 class="menu-item"><a href="">KONTAKTY</a></h2>
         <h2 class="menu-item"><a href="">LEKTOŘI</a></h2>
     </div>
 </template>
@@ -19,13 +19,12 @@
     justify-content: center;
 }
 .menu-item {
-    display: inline-block;
     text-align: center;
-    width: 25%;
+    flex: 2;
     padding: 5px;
 }
 .menu-logo {
-
+    
 }
 .menu-item a {
     text-decoration: none;
