@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <ItemMenu />
-    <ItemCard />
-  </div>
+  <ItemMenu />
+  <ItemCard />
 </template>
 <style>
 html, body {
