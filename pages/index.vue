@@ -1,7 +1,6 @@
 <template>
     <div>
-      <ItemMenu />
-      <ItemCard />
+        <ItemFindOutMore />
     </div>
   </template>
   <style>

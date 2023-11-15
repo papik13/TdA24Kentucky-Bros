@@ -28,6 +28,8 @@
 </script>
 <style scoped>
 .frame {
+    z-index: 0;
+    opacity: 1;
     background-color: #333333;
     display: flex;
     flex-direction: row;
@@ -47,9 +49,6 @@
 .frame .overlap {
     position: relative;
     width: 50%;
-    top: 0;
-    left: 0;
-    background-image: url(./img/frame-8.png);
     background-size: 100% 100%;
 }
 
@@ -59,12 +58,8 @@
 }
 
 .frame .text-wrapper {
-    left: 0;
     font-family: "Lalezar-Regular", Helvetica;
-    font-size: 128px;
-    line-height: 166.4px;
     position: relative;
-    top: 0;
     font-weight: 400;
     color: #ffffff;
     text-align: center;
@@ -77,11 +72,8 @@
     font-weight: 400;
     font-style: italic;
     color: #ffffff;
-    font-size: 40px;
     text-align: center;
     letter-spacing: 0;
-    line-height: 52px;
-    white-space: nowrap;
 }
 
 .frame .tda-ikony-celek {
@@ -125,15 +117,11 @@
 
 .frame .teacher-digital {
     width: 100%;
-    left: 11px;
     font-family: "Open Sans-Regular", Helvetica;
-    font-size: 48px;
-    line-height: 62.4px;
     position: relative;
     font-weight: 400;
     color: #ffffff;
     text-align: center;
-    padding: 100px;
 }
 
 .frame .overlap-2 {
@@ -148,28 +136,19 @@
     font-family: "Open Sans-Bold", Helvetica;
     font-weight: 700;
     color: #fecb2ea8;
-    font-size: 128px;
-    letter-spacing: 0;
-    line-height: 166.4px;
     white-space: nowrap;
 }
 
 .frame .text-wrapper-3 {
     position: relative;
-    top: 0;
-    left: 0;
     font-family: "Open Sans-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
-    font-size: 128px;
-    letter-spacing: 0;
-    line-height: 166.4px;
     white-space: nowrap;
 }
 
 .stripe {
     background-color: #74c7d3;
-    height: 90px;
 }
 
 </style>

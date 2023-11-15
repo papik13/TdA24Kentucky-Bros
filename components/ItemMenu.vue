@@ -1,101 +1,116 @@
 <template>
-    <div class="menu">
-      <img class="teacherdigitalagency" src="/TeacherDigitalAgency_LOGO_black 2.png" />
-      <div v-for="(item, index) in menuItems" :key="index" 
-           class="menu-item" 
-           @mouseover="item.increased = true" 
-           @mouseleave="item.increased = false" 
-           :class="{ 'increased-padding': item.increased }">
-        <a href="" class="text-wrapper">{{ item.name }}</a>
+  <div>
+    <div class="nav-menu"> 
+      <i 
+        class="fas fa-bars" 
+        @click="showMenu()"> 
+        </i>
+      <div
+      class="nav-content"
+      :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'"
+      >
+        <div class="logo">Logo</div>
+          <ul class="nav-items">
+            <li><a href="">Domů</a></li>
+            <li><a href="">Vizitky</a></li>
+            <li><a href="">Kontakt</a></li>
+            <li>
+              <input type="text" placeholder="Hledejte...">
+            </li>
+          </ul>
       </div>
-      <input class="input-wrapper" type="text" placeholder="Hledej...">
     </div>
-  </template>
-  
-  <script>
+  </div>
+</template>
+<script>
   export default {
     data() {
       return {
-        menuItems: [
-          { name: 'Domů', increased: false },
-          { name: 'Kontakt', increased: false },
-          { name: 'Vizitky', increased: false }
-        ]
+        showMobileMenu: false
+      }; // Removed the comma here
+    },
+    methods: {
+      showMenu() {
+        this.showMobileMenu = !this.showMobileMenu;
       }
     }
-  }
-  </script>
-  
-  <style scoped>
-  .menu {
-    display: flex;
-    height: 25%;
-    background-color: #74c7d3;
-    align-items: center;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-  
-  .menu .menu-item {
-    position: relative; /* Added relative positioning */
-    width: 10%;
-    height: 50%;
+  };
+</script>
+<style lang="scss" scoped>
+.nav-menu {
+  background-color: #74c7d3;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+}
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  li {
+    margin: 5px;
+    padding: 5px 10px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
     background-color: #FECB2E;
     border-radius: 20px;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    transition: all 0.3s ease;
-    overflow: hidden; /* Prevents content from spilling out */
   }
-  
-  .menu .menu-item .text-wrapper {
-    transition: transform 0.3s ease;
-    padding: 10px;
-    text-align: center;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 25px;
-    letter-spacing: 0;
-    line-height: 31.2px;
+  li a {
+    color: black;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
   }
-  
-  .menu .menu-item.increased-padding .text-wrapper {
-    transform: scale(0.8); /* Adjust scale value to prevent the text from overflowing */
-  }
-  
-  .menu input {
-    width: 10%;
-    height: 50%;
+  li input {
     background-color: #FECB2E;
-    border-radius: 20px;
-    margin: 10px;
-    align-items: center;
     border: none;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 600;
-    color: #3a3a3a;
-    font-size: 25px;
-    letter-spacing: 0;
-    line-height: 31.2px;
-    text-align: center;
-    padding: 10px;
   }
-  
-  .menu .teacherdigitalagency {
+}
+.nav-items li:hover {
+  transform: scale(0.85); /* Scale up li elements on hover */
+}
+
+i {
+  display: none;
+}
+// Mobile version - hidden hamburger menu
+@media screen and (max-width: 768px) {
+    .nav-menu {
+    z-index: 1;
+    padding-top: 10px;
     position: absolute;
-    width: 7%;
-    left: 25px;
-    object-fit: cover;
+    width: 100%;
+    opacity: 2;
   }
-  </style>
-  
+  .open-menu {
+    opacity: 2;
+    height: 200px;
+  }
+  .closed-menu {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+  .nav-content {
+    flex-direction: column;
+    position: relative;
+    transition: all 0.2s ease-out;
+  }
+    .nav-items {
+      flex-direction: column;
+    }
+    i {
+    display: block;
+    text-align: center;
+    padding: 0 10px 10px 0;
+    .logo {
+      display: inline-block;
+    }
+  }
+}
+</style>
