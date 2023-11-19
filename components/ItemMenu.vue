@@ -83,23 +83,25 @@ i {
     .nav-menu {
     z-index: 1;
     padding-top: 10px;
-    position: absolute;
+    position: relative;
     width: 100%;
     opacity: 2;
   }
   .open-menu {
     opacity: 2;
-    height: 200px;
+    height: 100%;
+    transition: transform 0.5s ease;
   }
   .closed-menu {
     opacity: 0;
     height: 0;
     padding: 0;
+    transition: transform 0.5s ease;
   }
   .nav-content {
     flex-direction: column;
     position: relative;
-    transition: all 0.2s ease-out;
+    transition: all 0.5s ease-out;
   }
     .nav-items {
       flex-direction: column;

@@ -35,6 +35,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    position: relative;
 }
 
 .frame .div {
