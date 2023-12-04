@@ -1,5 +1,5 @@
 <template>
-  <ItemMenu />
+  <ItemMenu2 />
   <NuxtPage />
 </template>
 <style>
