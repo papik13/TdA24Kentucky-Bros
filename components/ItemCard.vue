@@ -1,19 +1,23 @@
 <template>
   <v-container class="main-container">
     <v-card class="second-container">
-      <v-img
-        class="main-image"
-        src="/jamal.jpg"
-        alt="pracant"
-      ></v-img>
+      <img class="main-image" :src="lecturers.picture_url" alt="lecturer">
       
-      <v-img
-        class="secondary-image"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/027c1e11-8cf3-4884-bf72-4685aee97c36?apiKey=af67d8107ba84b21b388a6b10a1ab2f6&"
-      ></v-img>
+      <v-list class="info-container-second">
+
+      </v-list>
+    </v-card>
+    <v-card class="container">
       
       <v-list class="info-container">
-        <v-list-item>{{ lecturers.first_name }}</v-list-item>
+        <v-list-item>{{ lecturers.title_before }} {{ lecturers.first_name }} {{ lecturers.middle_name }} {{ lecturers.last_name }} {{ lecturers.title_after }}</v-list-item>
+      </v-list>
+      {{ lecturers.bio }}
+    </v-card>
+    <v-card class="next-lecturers-container">
+      
+      <v-list class="info-container">
+        <v-list-item>{{ lecturers.first_name }} {{ lecturers.last_name }}</v-list-item>
       </v-list>
     </v-card>
   </v-container>
@@ -42,39 +46,30 @@ export default {
 
 <style scoped>
 .main-container {
-  background-color: #333;
+  background-color: #2C2C2C;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: row;
+  min-height: 90vh;
 }
 
 .second-container {
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3vh;
   border: 1px solid #2d2d2d;
   box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
   background-color: #00384d;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  margin-left: 50px;
-  margin-top: 50px;
-  padding: 20px;
-}
-
-@media (max-width: 991px) {
-  .second-container {
-    max-width: 100%;
-    margin-top: 40px;
-    padding: 100px 20px 0;
-  }
+  width: 30vh;
+  margin: 5vh;
+  padding: 2vh;
 }
 
 .main-image {
-  aspect-ratio: 0.82;
-  object-fit: contain;
-  width: 90%;
-  align-self: center;
-  padding: 20px;
+  width: 20vh;
+  margin: 2vh;
+  border-radius: 2vh;
 }
 
 .secondary-image {
@@ -84,25 +79,35 @@ export default {
   margin-top: 62px;
 }
 
-@media (max-width: 991px) {
-  .secondary-image {
-    margin-top: 40px;
-  }
+
+.info-container-second {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+}
+
+.container {
+  border-radius: 3vh;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
+  background-color: #333333;
+  width: 90vh;
+  margin: 5vh;
+  text-align: center;
 }
 
 .info-container {
+  display: flex;
+  justify-content: space-around;
   color: #fff;
-  font-feature-settings: "clig" off, "liga" off;
-  align-self: stretch;
-  margin-top: 51px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  line-height: 130%;
+  font-size: 4vh;
+  text-align: center;
 }
-
-@media (max-width: 991px) {
-  .info-container {
-    margin-top: 40px;
-  }
+.next-lecturers-container {
+  border-radius: 3vh;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
+  background-color: #FECB2E;
+  min-width: 25vh;
+  margin: 5vh;
 }
 </style>
