@@ -49,7 +49,7 @@ data: () => ({
 .nav-content {
   display: flex;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 1vw 1vw;
   align-items: center;
 }
 .nav-items {
@@ -62,11 +62,13 @@ data: () => ({
   cursor: pointer;
 
   li {
-    margin: 5px;
-    padding: 5px 10px;
+    margin: 1vw;
+    padding: 1vw 1vw;
     transition: transform 0.3s ease; /* Smooth transition for scaling */
     background-color: #FECB2E;
-    border-radius: 20px;
+    border-radius: 3vh;
+    font-size: 3vh;
+    font-weight: 900;
   }
   li a {
     color: black;
@@ -78,7 +80,7 @@ data: () => ({
   }
 }
 #logo {
-    height: 5vh;
+    height: 11vh;
 }
 .nav-items li:hover {
   transform: scale(0.85); /* Scale up li elements on hover */
