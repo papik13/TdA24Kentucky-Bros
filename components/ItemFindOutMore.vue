@@ -5,9 +5,12 @@
                 <div class="text-wrapper">TEACHER DIGITAL AGENCY</div>
                 <p class="p">„Život je nejlepší školou života.” ~Jára Cimrman</p>
             </div>
-            <img class="tda-ikony-celek" src="/TdA_ikony_celek_white 1.png" />
+            <img class="tda-ikony-celek" src="/TdA_ikony_celek_white.png" />
             <div class="div-2"></div>
             <div class="div-3"></div>
+            <div class="Kdojsme">
+                <h1>KDO JSME ?</h1>
+            </div>
             <div class="group">
                 <div class="overlap-group-2">
                     <div class="div-4"></div>
@@ -27,20 +30,21 @@
 <script>
 </script>
 <style scoped>
+
+@import '@/assets/styles.css';
 .frame {
-    z-index: 0;
-    opacity: 1;
-    background-color: #333333;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    position: relative;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    align-self: stretch;
 }
 
 .frame .div {
     background-color: #333333;
-    width: 50%;
+    width: 100%;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -48,33 +52,31 @@
 }
 
 .frame .overlap {
+    display: flex;
     position: relative;
     width: 50%;
     background-size: 100% 100%;
 }
 
 .frame .overlap-group {
-    position: relative;
-    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .frame .text-wrapper {
-    font-family: "Lalezar-Regular", Helvetica;
-    position: relative;
-    font-weight: 400;
-    color: #ffffff;
-    text-align: center;
-    letter-spacing: 0;
+    color: white;
+    font-size: 11.5vh;
+    display: inline-block;
 }
 
 .frame .p {
-    position: relative;
-    font-family: "Open Sans-Italic", Helvetica;
-    font-weight: 400;
-    font-style: italic;
-    color: #ffffff;
-    text-align: center;
-    letter-spacing: 0;
+    font-size: 4.5vh;
+    color: white;
+    display: inline-block;
 }
 
 .frame .tda-ikony-celek {
@@ -98,31 +100,40 @@
 
 .frame .group {
     position: relative;
-    width: 100%;
-    box-shadow: 0px 4px 4px #00000040;
+    width: 60%;
+    margin: auto;
+    box-shadow: 2px 3px 5px 3px #00000040;
 }
 
 .frame .overlap-group-2 {
     position: relative;
     width: 100%;
+    margin-top: 10vh;
 }
 
 .frame .div-4 {
     width: 100%;
     top: 0;
     background-color: #333333;
-    box-shadow: 0px 4px 4px 3px #0000004c;
     position: relative;
     left: 0;
 }
 
 .frame .teacher-digital {
     width: 100%;
-    font-family: "Open Sans-Regular", Helvetica;
     position: relative;
     font-weight: 400;
+    font-size: 2vh;
     color: #ffffff;
     text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.Kdojsme {
+    color: white;
+    text-align: center;
+    font-size: 8vh;;
 }
 
 .frame .overlap-2 {
@@ -134,7 +145,6 @@
     position: relative;
     top: 5px;
     left: 0;
-    font-family: "Open Sans-Bold", Helvetica;
     font-weight: 700;
     color: #fecb2ea8;
     white-space: nowrap;
@@ -142,7 +152,6 @@
 
 .frame .text-wrapper-3 {
     position: relative;
-    font-family: "Open Sans-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
     white-space: nowrap;
@@ -150,6 +159,25 @@
 
 .stripe {
     background-color: #74c7d3;
+}
+
+
+
+@media screen and (max-width: 1900px) {
+  /* Media query for smaller screens (adjust values as needed) */
+  .frame .text-wrapper {
+    font-size: 6vw;
+    margin-top: 15vh;
+  }
+
+  .frame .p {
+    font-size: 2.5vw;
+  }
+
+  .frame .teacher-digital {
+    font-size: 1.2vw;
+    padding: 1.5vh 4vw;
+  }
 }
 
 </style>

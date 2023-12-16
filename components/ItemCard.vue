@@ -69,7 +69,7 @@ export default {
 }
 
 .main-image {
-  width: 15vw;
+  width: 12vw;
   margin: 2vh;
   border-radius: 2vh;
 }
@@ -79,12 +79,12 @@ export default {
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3vh;
-  background-color: #333;
+  color: black;
+  font-size: 2vh;
+  background-color: #74c7d3;
   border-radius: 3vh;
   margin: 1vh;
+  padding: 0.6vh;
 }
 
 .container {
@@ -104,7 +104,6 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 3vw;
   text-align: center;
 }
@@ -113,7 +112,6 @@ export default {
   display: flex;
   flex-direction: row;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 2vw;
   text-align: center;
   justify-content: center;

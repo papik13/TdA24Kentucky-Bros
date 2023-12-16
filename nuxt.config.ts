@@ -10,5 +10,9 @@ export default {
         import: ['~vuetify/src/styles/styles.styl']
       }
     }
-  }
+  },
+  css: [
+    "layouts/global.css",
+  ]
 };
+
