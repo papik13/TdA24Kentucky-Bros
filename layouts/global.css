@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Lalezar";
+    src: local("Lalezar"),
+     url(assets/Lalezar/Lalezar-Regular.ttf) format("truetype");
+} 
+
+html {
+    font-family: "Lalezar";
+}
