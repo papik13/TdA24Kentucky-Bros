@@ -4,7 +4,7 @@
         <div class="nav-content">
             <v-toolbar-title>
                 <img
-                    src="TeacherDigitalAgency_LOGO_black.png"
+                    src="/TeacherDigitalAgency_LOGO_black.png"
                     alt="Teacher Digital Agency Logo"
                     id="logo"
                 >
@@ -18,7 +18,7 @@
             @mouseleave="hover = ''"
             :class="{ 'menu-item-hover': hover === item.title }"
           >
-            <a href="#"><v-btn text>{{ item.title }}</v-btn></a>
+            <a :href="item.link"><v-btn text>{{ item.title }}</v-btn></a>
           </li>
         </ul>
         </div>
@@ -33,9 +33,8 @@ export default {
 data: () => ({
     hover: '',
     menuItems: [
-    { title: 'Domů' },
-    { title: 'Vizitky' },
-    { title: 'Kontakt' },
+    { title: 'Domů', link: '/'},
+    { title: 'Vizitky', link: '/lectures'},
     ],
 }),
 };

@@ -6,7 +6,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: Lalezar;
 }
 
 </style>

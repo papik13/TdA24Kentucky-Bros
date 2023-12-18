@@ -13,6 +13,7 @@
       
       <v-list class="info-container">
         <v-list-item>{{ lecturers.title_before }} {{ lecturers.first_name }} {{ lecturers.middle_name }} {{ lecturers.last_name }} {{ lecturers.title_after }}</v-list-item>
+        <p><v-list-item>{{ lecturers.claim }}</v-list-item></p>
         <div class="mini-info-container">
           <v-list-item>Lokalita: {{ lecturers.location }}</v-list-item>
           <v-list-item>Cena: {{ lecturers.price_per_hour }} czk/h</v-list-item>
@@ -108,6 +109,9 @@ export default {
   text-align: center;
 }
 
+.info-container p {
+  font-size: 2vw;
+}
 .info-container .bio {
   display: flex;
   flex-direction: row;
