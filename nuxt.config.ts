@@ -12,7 +12,7 @@ export default {
     }
   },
   css: [
-    "layouts/global.css",
+    '~/assets/css/fonts.css'
   ]
 };
 

@@ -30,8 +30,6 @@
 <script>
 </script>
 <style scoped>
-
-@import '@/assets/styles.css';
 .frame {
     margin: 0;
     padding: 0;
