@@ -1,5 +1,5 @@
 export default defineEventHandler((event) => {
     return {
-      secret: 'The cake is a lie'
+        'secret': 'The cake is a lie'
     }
-  })
+})
