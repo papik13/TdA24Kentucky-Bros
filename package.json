@@ -22,8 +22,10 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
+    "@prisma/client": "^5.7.1",
     "express": "^4.18.2",
     "joi": "^17.11.0",
+    "prisma": "^5.7.1",
     "sqlite3": "^5.1.7-rc.0",
     "uuid": "^9.0.1"
   }

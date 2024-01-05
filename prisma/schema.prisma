@@ -1,0 +1,52 @@
+datasource db {
+    provider = "sqlite"
+    url      = "file:./records.db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Lecturer {
+    uuid           String        @id
+    title_before   String?
+    first_name     String
+    middle_name    String?
+    last_name      String
+    title_after    String?
+    picture_url    String?
+    location       String?
+    claim          String?
+    bio            String?
+    tags           Tag[]
+    price_per_hour Float?
+    contact        Contact_info?
+}
+
+model Tag {
+    uuid      String     @id
+    name      String
+    lecturers Lecturer[]
+}
+
+model Contact_info {
+    uuid              String             @id @default(uuid())
+    telephone_numbers Telephone_number[]
+    emails            Email[]
+    lecturer          Lecturer           @relation(fields: [lecturerId], references: [uuid])
+    lecturerId        String             @unique
+}
+
+model Telephone_number {
+    uuid      String       @id @default(uuid())
+    number    String
+    contact   Contact_info @relation(fields: [contactId], references: [uuid])
+    contactId String
+}
+
+model Email {
+    uuid      String       @id @default(uuid())
+    email     String
+    contact   Contact_info @relation(fields: [contactId], references: [uuid])
+    contactId String
+}
