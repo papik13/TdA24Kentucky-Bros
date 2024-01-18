@@ -63,7 +63,7 @@ data: () => ({
   li {
     margin: 0 1vw;
     padding: 0.6vw 1vw;
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    transition: transform 0.3s ease; 
     background-color: #FECB2E;
     border-radius: 3vh;
     font-size: 2.5vh;
@@ -82,7 +82,7 @@ data: () => ({
     height: 4vw;
 }
 .nav-items li:hover {
-  transform: scale(0.85); /* Scale up li elements on hover */
+  transform: scale(0.85); 
 }
 
 i {

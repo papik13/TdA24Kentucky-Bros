@@ -31,14 +31,14 @@ export default {
   name: 'SecondContainer',
   data() {
     return {
-      lecturers: {} // Initialize items as an empty object or with a default structure
+      lecturers: {}
     };
   },
   created() {
-    fetch('lecturer.json') // Fetch the JSON data
+    fetch('lecturer.json')
       .then(response => response.json())
       .then(data => {
-        this.lecturers = data; // Assign the fetched data to items
+        this.lecturers = data;
       })
       .catch(error => {
         console.error('Error fetching data:', error);

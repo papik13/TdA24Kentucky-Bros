@@ -26,10 +26,6 @@
     </div>
   </template>
   
-  <script>
-    // Tvoje JavaScriptové skripty by sem mohly být vloženy
-  </script>
-  
   <style scoped>
     .frame {
       margin: 0;

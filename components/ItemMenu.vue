@@ -27,7 +27,7 @@
     data() {
       return {
         showMobileMenu: false
-      }; // Removed the comma here
+      }; 
     },
     methods: {
       showMenu() {
@@ -58,7 +58,7 @@
   li {
     margin: 5px;
     padding: 5px 10px;
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    transition: transform 0.3s ease; 
     background-color: #FECB2E;
     border-radius: 20px;
   }
@@ -72,7 +72,7 @@
   }
 }
 .nav-items li:hover {
-  transform: scale(0.85); /* Scale up li elements on hover */
+  transform: scale(0.85);
 }
 
 i {
