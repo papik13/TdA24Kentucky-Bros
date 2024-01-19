@@ -4,13 +4,13 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: ./path/to/frontend/Dockerfile
+      dockerfile: .src/Dockerfile
     ports:
       - "3000:3000"
 
   backend:
     build:
       context: .
-      dockerfile: ./path/to/backend/Dockerfile
+      dockerfile: .api/Dockerfile
     ports:
       - "3001:3001"
