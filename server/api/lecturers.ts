@@ -1,4 +1,9 @@
 const firebase = require('firebase');
+const express = require('express')
+const cors = require('cors')
+const app = express()
+app.use(express.json())
+app.use(cors())
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -35,5 +40,4 @@ const deleteLecturer = (lecturerId: string) => {
   const lecturerRef = db.ref(`lecturers/${lecturerId}`);
   lecturerRef.remove();
 };
-
-
+app.liste(3001, () => console.log("Up and running at 3001"))
