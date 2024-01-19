@@ -5,7 +5,7 @@
           <div class="text-wrapper">TEACHER DIGITAL AGENCY</div>
           <p class="quote">„Život je nejlepší školou života.” ~Jára Cimrman</p>
         </div>
-        <button id="findout">Zjisti víc</button>
+        <button id="findout" @click="scrollToFooter">Zjisti víc</button>
         <img class="logo" src="/TdA_ikony_celek_white.png" alt="Teacher Digital Agency Logo" />
         <div class="divider div-2"></div>
         <div class="divider div-3"></div>
@@ -24,9 +24,49 @@
         <div class="stripe"></div>
       </div>
     </div>
+    <footer class="cernej-footer"></footer>
+    <footer class="normalni-footer"><a href="example.com"> Zpracovaní osobních údajů</a></footer>
   </template>
   
+<script>
+export default {
+  // ... existing code ...
+
+  methods: {
+  scrollToFooter() {
+    const footerElement = document.querySelector('.normalni-footer'); // or '.normalni-footer'
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
+},
+};
+</script>
+  
   <style scoped>
+    .cernej-footer{
+      background-color: #333;  
+      height: 12vh;
+    }
+    .normalni-footer {
+    text-align: center; 
+    text-decoration: none;
+    align-items: center;
+    background-color: #74c7d3;
+    height: 10vh;
+    z-index: 1000;
+    color: white; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .normalni-footer a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 2.2vh;
+      font-weight: lighter;
+    }
     .frame {
       margin: 0;
       padding: 0;
@@ -103,7 +143,7 @@
       color: white;
       text-align: center;
       font-size: 8vh;
-      margin-top: 5vh;
+      margin-top: 10vh;
       }
   
     .group {
@@ -116,7 +156,8 @@
     .overlap-group-2 {
       position: relative;
       width: 100%;
-      margin-top: 10vh;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
     }
   
     .div-4 {
@@ -131,8 +172,6 @@
       font-size: 2vh;
       color: #ffffff;
       text-align: center;
-      padding-top: 2vh;
-      padding-bottom: 2vh;
       font-family: Open Sans;
     }
   

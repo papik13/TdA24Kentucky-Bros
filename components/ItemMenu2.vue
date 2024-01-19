@@ -44,6 +44,10 @@ data: () => ({
 <style lang="scss" scoped>
 .nav-menu {
   background-color: #74c7d3;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the menu stays on top of other elements */
+  transition: background-color 0.3s ease;
 }
 .nav-content {
   display: flex;
