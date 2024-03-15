@@ -34,7 +34,7 @@ data: () => ({
     hover: '',
     menuItems: [
     { title: 'Domů', link: '/'},
-    { title: 'Vizitky', link: '/lectures'},
+    { title: 'Vizitky', link: '/lecturer'},
     ],
 }),
 };
